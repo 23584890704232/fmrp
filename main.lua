@@ -162,8 +162,8 @@ local Tabs = {
 			end
 		end
 		Iris.Text({"Character Transparency"})
-		EndoSkeletonEnabled = Iris.Checkbox({"Endo Skeleton Only"}).checked() 
-		FlasherEnabled = Iris.Checkbox({"Transparency Flasher [KEYBIND: R]"}).checked()
+		EndoSkeletonEnabled = Iris.Checkbox({"Endo Skeleton Only"}).state.isChecked.value 
+		FlasherEnabled = Iris.Checkbox({"Transparency Flasher [KEYBIND: R]"}).state.isChecked.value
 		local CharacterTransparency = Iris.SliderNum({"", 1, 0, 100})
 		if CharacterTransparency.numberChanged() and not TransparencyDB then
 			task.spawn(function()
